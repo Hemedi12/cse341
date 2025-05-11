@@ -2,8 +2,8 @@ const express = require('express');
 const app = express();
 const lesson1Controller = require('./controllers/lesson1');
 
-app.get('/', lesson1Controller.emilyRoute);
-app.get('/hannah', lesson1Controller.hannahRoute);
+app.get('/', lesson1Controller.charlesRoute);
+app.get('/hannah', lesson1Controller.estherRoute);
 
 const port = 3000;
 
