@@ -1,11 +1,17 @@
-const express = require('express');
-const app = express();
-const lesson1Controller = require('./controllers/lesson1');
+const charlesRoute = (req, res) => {
+    res.send('Charles Hemedi');
+  };
+  
+  const estherRoute = (req, res) => {
+    res.send('Esther Grace');
+  };
 
-app.get('/', lesson1Controller.charlesRoute);
-app.get('/hannah', lesson1Controller.estherRoute);
-
-const port = 3000;
-
-app.listen(process.env.PORT || port);
-console.log('Web Server is listening at port ' + (process.env.PORT || port));
+  const gedeonRoute = (req, res) => {
+    res.send('Gedeon Noe');
+  };
+  
+  module.exports = {
+    gedeonRoute,
+    charlesRoute,
+    estherRoute,
+  };
