@@ -1,11 +1,11 @@
+
 const express = require('express');
-const app = express();
+const router = express.Router();
 
-const port = 3000;
+const usersController = require('../controllers/contact');
 
-app.use('/', require('./routes'));
+router.get('/', usersController.getAll);
 
-app.listen(process.env.PORT || port);
-console.log('Web Server is listening at port ' + (process.env.PORT || port));
+router.get('/:id', usersController.getSingle);
 
-
+module.exports = router;
